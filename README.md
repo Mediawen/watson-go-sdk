@@ -71,21 +71,21 @@ You have to specify the the language in which the audio is spoken. For each lang
 
 - Get list of models and languages:
 
-* Model Type
+- Model Type
 
-```go
-type Model struct {
-	Rate int		// Minimum Sampling Rate
-	Name string		// Model Name
-	Lang string		// Model Language
-	Desc string		// Model Description
-}
-
-type Models struct {
-	Models []Model
-}
-```
-
+    ```go
+    type Model struct {
+    	Rate int		// Minimum Sampling Rate
+    	Name string		// Model Name
+    	Lang string		// Model Language
+    	Desc string		// Model Description
+    }
+    
+    type Models struct {
+    	Models []Model
+    }
+    ```
+    
 * Example
 
 ```go

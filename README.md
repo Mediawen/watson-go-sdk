@@ -69,7 +69,7 @@ You have to specify the language in which the audio is spoken. For each language
   - The broadband model with audio that is sampled at greater than or equal to 16 KHz.
   - The narrowband model with audio that is derived from the telephone, which is typically recorded at 8 KHz.
 
-  Here is the result as of September, 2015.
+  Here is the list of Models in September, 2015:
 
     ```
     en-US 8000    => en-US_NarrowbandModel
@@ -177,7 +177,7 @@ You have to specify the language in which the audio is spoken. For each language
 
 To synthesize text, you have to specify the input text, the audio format and the voice.
 
-  Here is the list of voices as of September, 2015.
+  Here is the list of Voices in September, 2015.
 
     ```
     en-US male     => en-US_MichaelVoice

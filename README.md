@@ -71,7 +71,7 @@ You have to specify the the language in which the audio is spoken. For each lang
 
 - Get list of models and languages:
 
-- Model Type
+  - Model Type
 
     ```go
     type Model struct {
@@ -82,34 +82,34 @@ You have to specify the the language in which the audio is spoken. For each lang
     }
     
     type Models struct {
-    	Models []Model
+    	Models []Model		// List of Model(s)
     }
     ```
     
-* Example
-
-```go
-package main
-
-import (
-	"fmt"
-	"log"
-	"github.com/mediawen/watson-go-sdk"
-)
-
-func main() {
-	w := watson.New("foo", "shhhht")
-
-	ml, err := w.GetModels()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	for _, m := range ml.Models {
-		fmt.Printf("%s %-8d=> %s\n", m.Lang, m.Rate, m.Name)
-	}
-}
-```
+  - Example
+    
+    ```go
+    package main
+    
+    import (
+    	"fmt"
+    	"log"
+    	"github.com/mediawen/watson-go-sdk"
+    )
+    
+    func main() {
+    	w := watson.New("foo", "shhhht")
+    
+    	ml, err := w.GetModels()
+    	if err != nil {
+    		log.Fatal(err)
+    	}
+    
+    	for _, m := range ml.Models {
+    		fmt.Printf("%s %-8d=> %s\n", m.Lang, m.Rate, m.Name)
+    	}
+    }
+    ```
 
 Simple isn't it ?
 

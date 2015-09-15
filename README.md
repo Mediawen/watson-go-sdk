@@ -250,25 +250,25 @@ To synthesize text, you have to specify the input text, the audio format and the
     
     func main() {
     	w := watson.New(cfg.User, cfg.Pass)
-
-	a, err := w.Synthesize(text, voice, ext)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer a.Close()
-
-	f, err := os.Create(out)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer f.Close()
-	
-	n, err := io.Copy(f, a)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	fmt.Printf("%s: %d bytes written\n", out, n)
+    	
+    	a, err := w.Synthesize(text, voice, ext)
+    	if err != nil {
+    		log.Fatal(err)
+    	}
+    	defer a.Close()
+    	
+    	f, err := os.Create(out)
+    	if err != nil {
+    		log.Fatal(err)
+    	}
+    	defer f.Close()
+    	
+    	n, err := io.Copy(f, a)
+    	if err != nil {
+    		log.Fatal(err)
+    	}
+    	
+    	fmt.Printf("%s: %d bytes written\n", out, n)
     }
     ```
 

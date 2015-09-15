@@ -3,29 +3,28 @@
 Simple Watson SDK for the [Go programming language](http://golang.org/).
 
 ---------------------------------------
-
   * [Features](#features)
   * [Requirements](#requirements)
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Demos](#demos)
   * [Contributors](#contributors)
   * [License](#license)
 
 ---------------------------------------
-
 ## Features
 
   * Lightweight
   * Native Go implementation. No C-bindings, just pure Go
 
----------------------------------------
+So far only [Speech To Text](http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/speech-to-text.html) and [Text To Speech](http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/text-to-speech.html) functionalities have been implemented. 
 
+---------------------------------------
 ## Requirements
 
   * Go 1.2 or higher
 
 ---------------------------------------
-
 ## Installation
 
 - `watson-go-sdk` is available as a normal Go package with this Github branch. Just include it in your dependencies (imports) on your code. Then type:
@@ -33,19 +32,31 @@ Simple Watson SDK for the [Go programming language](http://golang.org/).
 go get "github.com/mediawen/watson-go-sdk"
 
 ---------------------------------------
-
 ## Usage
 
 - Coming Soon
 
 ---------------------------------------
+## Roadmap
 
+- Fix issues reported on this repository
+- Add other Watson functionalities:
+
+---------------------------------------
+## Demos
+
+- Text To Speech API [demo](https://speech-to-text-demo.mybluemix.net/).
+- Speech To Text API [demo](https://text-to-speech-demo.mybluemix.net/).
+- At [MediaWen International](http://mediawen.com), we use these technologies to enhance our platform of closed captioning, subtitling, and automatic dubbing: [STVHub](http://stvhub.com). By exemple, we generated the voice over (or Automatic Dubbing) on following video of the French minister of foreing affairs. Just watch it and listen him in [Spanish](https://www.youtube.com/watch?v=tF852LsSwoo) or in [English](https://www.youtube.com/watch?v=8sWZMea-q2I).
+
+![Automatic Dubbing image](doc/img/fabius.jpg)
+
+---------------------------------------
 ## Contributors
 
 - [Philippe Anel](https://github.com/xigh)
 
 ---------------------------------------
-
 ## License
 
 The file cookie.go has been picked from go net/http package. It's under the following BSD License:

@@ -43,13 +43,82 @@ $ go get "github.com/mediawen/watson-go-sdk"
 ---------------------------------------
 ## Usage
 
-Usage of this SDK is simple. 
+Usage of this SDK is simple.
 
+Go to [IBM/Bluemix](https://console.ng.bluemix.net/).
 
+Once you allocate a Watson service, from the dashboard, you can go to the service settings, and get the service credentials where you can extract username and password required to initialize this SDK :
+
+```go
+package main
+
+import (
+	"fmt"
+	"log"
+	"github.com/mediawen/watson-go-sdk"
+)
+
+func main() {
+	w := watson.New("<username>", "<password>")
+```
+
+Replace <username> and <password> from the service credentials.
+
+### Speech To Text
+
+- The Speech To Text service allows you to transcribe audio data to text.
+You have to specify the the language in which the audio is spoken. For each language, the service supports two models:
+  - The broadband model with audio that is sampled at greater than or equal to 16 KHz.
+  - The narrowband model with audio that is derived from the telephone, which is typically recorded at 8 KHz.
+
+- Get list of models and languages:
+
+  - Model Type
+
+```go
+type Model struct {
+	Rate int		// Minimum Sampling Rate
+	Name string		// Model Name
+	Lang string		// Model Language
+	Desc string		// Model Description
+}
+
+type Models struct {
+	Models []Model
+}
+```
+
+  - Example
+
+```go
+package main
+
+import (
+	"fmt"
+	"log"
+	"github.com/mediawen/watson-go-sdk"
+)
+
+func main() {
+	w := watson.New("foo", "shhhht")
+
+	ml, err := w.GetModels()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, m := range ml.Models {
+		fmt.Printf("%s %-8d=> %s\n", m.Lang, m.Rate, m.Name)
+	}
+}
+```
+
+Simple isn't it ?
 
 ---------------------------------------
 ## Roadmap
 
+- Add live support (through websocket)
 - Fix issues reported on this repository
 - Add other Watson functionalities:
   - IBM Language Translation
@@ -68,9 +137,11 @@ Usage of this SDK is simple.
 
 - Text To Speech API [demo](https://speech-to-text-demo.mybluemix.net/).
 - Speech To Text API [demo](https://text-to-speech-demo.mybluemix.net/).
-- At [MediaWen International](http://mediawen.com), we use these technologies to enhance [STVHub](http://stvhub.com): our platform for closed captioning, subtitling, and automatic dubbing.
+- At [MediaWen International](http://mediawen.com), we use these technologies to enhance [STVHub](http://stvhub.com), our platform for closed captioning, subtitling, and automatic dubbing.
 
-  By example, we generated the voice over (or Automatic Dubbing) on a video of the French Minister of Foreign Affairs anouncing the Climate Change Conference [COP21](http://www.cop21.gouv.fr/) hosted in Paris, December 2015. Just watch it and listen in [Spanish](https://www.youtube.com/watch?v=tF852LsSwoo) and [English](https://www.youtube.com/watch?v=8sWZMea-q2I) IBM/Watson Speech Synthesis brought to you on video by [STVHub](http://stvhub.com):
+  By example, we generated the voice over (or Automatic Dubbing) on a video of the French Minister of Foreign Affairs anouncing the Climate Change Conference [COP21](http://www.cop21.gouv.fr/) hosted in Paris, December 2015.
+
+  Just watch it and listen in [Spanish](https://www.youtube.com/watch?v=tF852LsSwoo) and [English](https://www.youtube.com/watch?v=8sWZMea-q2I) IBM/Watson Speech Synthesis brought to you on video by [STVHub](http://stvhub.com).
 
 ![Automatic Dubbing image](doc/img/fabius.jpg)
 

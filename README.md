@@ -60,7 +60,7 @@ func main() {
 	w := watson.New("<username>", "<password>")
 ```
 
-Replace <username> and <password> from the service credentials.
+Replace 'username' and 'password' from the service credentials.
 
 ### Speech To Text
 

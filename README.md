@@ -41,6 +41,16 @@ go get "github.com/mediawen/watson-go-sdk"
 
 - Fix issues reported on this repository
 - Add other Watson functionalities:
+  - IBM Language Translation
+  - IBM Natural Language Classifier
+  - IBM Concept Expansion
+  - IBM Message Resonance
+  - IBM Personality Insights
+  - IBM Question and Answer
+  - IBM Relationship Extraction
+  - IBM Retrieve and Rank
+  - IBM Tradeoff Analytics
+  - IBM Visual Recognition
 
 ---------------------------------------
 ## Demos

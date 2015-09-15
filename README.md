@@ -34,11 +34,14 @@ go get "github.com/mediawen/watson-go-sdk"
 ---------------------------------------
 ## Usage
 
+Usage of this SDK is simple. 
+
 - Coming Soon
 
 ---------------------------------------
 ## Roadmap
 
+- 
 - Fix issues reported on this repository
 - Add other Watson functionalities:
   - IBM Language Translation
@@ -57,19 +60,18 @@ go get "github.com/mediawen/watson-go-sdk"
 
 - Text To Speech API [demo](https://speech-to-text-demo.mybluemix.net/).
 - Speech To Text API [demo](https://text-to-speech-demo.mybluemix.net/).
-- At [MediaWen International](http://mediawen.com), we use these technologies to enhance our platform of closed captioning, subtitling, and automatic dubbing: [STVHub](http://stvhub.com). By exemple, we generated the voice over (or Automatic Dubbing) on following video of the French minister of foreing affairs. Just watch it and listen him in [Spanish](https://www.youtube.com/watch?v=tF852LsSwoo) or in [English](https://www.youtube.com/watch?v=8sWZMea-q2I).
+- At [MediaWen International](http://mediawen.com), we use these technologies to enhance our platform of closed captioning, subtitling, and automatic dubbing: [STVHub](http://stvhub.com). By exemple, we generated the voice over (or Automatic Dubbing) on following video of the French minister of foreing affairs. Just watch it and listen him in [Spanish](https://www.youtube.com/watch?v=tF852LsSwoo) or in [English](https://www.youtube.com/watch?v=8sWZMea-q2I):
 
 ![Automatic Dubbing image](doc/img/fabius.jpg)
 
 ---------------------------------------
 ## Contributors
-
-- [Philippe Anel](https://github.com/xigh)
+- [Philippe Anel](https://github.com/xigh) - CTO of Mediawen
 
 ---------------------------------------
 ## License
 
-The file cookie.go has been picked from go net/http package. It's under the following BSD License:
+The file cookie.go has been picked from [go net/http](http://golang.org/pkg/net/http/) package. It's under the following BSD License:
 
     Copyright (c) 2012 The Go Authors. All rights reserved.
     
@@ -100,10 +102,10 @@ The file cookie.go has been picked from go net/http package. It's under the foll
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 All the rest of the code is under the the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
+you may not use these files except in compliance with the License.
 You may obtain a copy of the License at
 
-    [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+    http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,

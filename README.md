@@ -199,13 +199,13 @@ To synthesize text, you have to specify the input text, the audio format and the
 
     ```go
     type Voice struct {
-    	Name string			`json:"name"`
-    	Lang string			`json:"language"`
-    	Gender string			`json:"gender"`
+    	Name string		// Name of the voice
+    	Lang string		// Lang of the voice
+    	Gender string		// Gender of the voice
     }
     
     type Voices struct {
-    	Voices []Voice			`json:"voices"`
+    	Voices []Voice		// List of voices
     }
     ```
     

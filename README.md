@@ -53,8 +53,6 @@ Once you allocate a Watson service, from the dashboard, you can go to the servic
 package main
 
 import (
-	"fmt"
-	"log"
 	"github.com/mediawen/watson-go-sdk"
 )
 
@@ -73,7 +71,7 @@ You have to specify the the language in which the audio is spoken. For each lang
 
 - Get list of models and languages:
 
-  - Model Type
+* Model Type
 
 ```go
 type Model struct {
@@ -88,7 +86,7 @@ type Models struct {
 }
 ```
 
-  - Example
+* Example
 
 ```go
 package main

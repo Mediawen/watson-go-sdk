@@ -223,14 +223,14 @@ To synthesize text, you have to specify the input text, the audio format and the
     func main() {
     	w := watson.New("foo", "shhhht")
     
-	vl, err := w.GetVoices()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	for _, v := range vl.Voices {
-		fmt.Printf("%s %-8s => %s\n", v.Lang, v.Gender, v.Name)
-	}
+    	vl, err := w.GetVoices()
+    	if err != nil {
+    		log.Fatal(err)
+    	}
+    
+    	for _, v := range vl.Voices {
+    		fmt.Printf("%s %-8s => %s\n", v.Lang, v.Gender, v.Name)
+    	}
     }
     ```
 

@@ -26,22 +26,30 @@ So far only [Speech To Text](http://www.ibm.com/smarterplanet/us/en/ibmwatson/de
 
 ---------------------------------------
 ## Installation
+- `watson-go-sdk` is available as a normal Go package with this Github branch. Just include it in your dependencies (imports) on your code:
 
-- `watson-go-sdk` is available as a normal Go package with this Github branch. Just include it in your dependencies (imports) on your code. Then type:
+```go
+import "github.com/mediawen//watson-go-sdk"
+```
 
-go get "github.com/mediawen/watson-go-sdk"
+- Make sure [Git is installed](http://git-scm.com/downloads) on your machine and in your system's `PATH`.
+
+- Install the package to your [$GOPATH](http://code.google.com/p/go-wiki/wiki/GOPATH "GOPATH") with the [go tool](http://golang.org/cmd/go/ "go command") from shell:
+
+```bash
+$ go get "github.com/mediawen/watson-go-sdk"
+```
 
 ---------------------------------------
 ## Usage
 
 Usage of this SDK is simple. 
 
-- Coming Soon
+
 
 ---------------------------------------
 ## Roadmap
 
-- 
 - Fix issues reported on this repository
 - Add other Watson functionalities:
   - IBM Language Translation
@@ -66,6 +74,7 @@ Usage of this SDK is simple.
 
 ---------------------------------------
 ## Contributors
+
 - [Philippe Anel](https://github.com/xigh) - CTO of Mediawen
 
 ---------------------------------------

@@ -29,7 +29,7 @@ So far only [Speech To Text](http://www.ibm.com/smarterplanet/us/en/ibmwatson/de
 - `watson-go-sdk` is available as a normal Go package with this Github branch. Just include it in your dependencies (imports) on your code:
 
 ```go
-import "github.com/mediawen//watson-go-sdk"
+import "github.com/mediawen/watson-go-sdk"
 ```
 
 - Make sure [Git is installed](http://git-scm.com/downloads) on your machine and in your system's `PATH`.
@@ -68,7 +68,7 @@ Usage of this SDK is simple.
 
 - Text To Speech API [demo](https://speech-to-text-demo.mybluemix.net/).
 - Speech To Text API [demo](https://text-to-speech-demo.mybluemix.net/).
-- At [MediaWen International](http://mediawen.com), we use these technologies to enhance our platform of closed captioning, subtitling, and automatic dubbing: [STVHub](http://stvhub.com). By exemple, we generated the voice over (or Automatic Dubbing) on following video of the French minister of foreing affairs. Just watch it and listen him in [Spanish](https://www.youtube.com/watch?v=tF852LsSwoo) or in [English](https://www.youtube.com/watch?v=8sWZMea-q2I):
+- At [MediaWen International](http://mediawen.com), we use these technologies to enhance our platform of closed captioning, subtitling, and automatic dubbing: [STVHub](http://stvhub.com). By example, we generated the voice over (or Automatic Dubbing) on video of the French Minister of Foreign Affairs. Just watch it and listen in [Spanish](https://www.youtube.com/watch?v=tF852LsSwoo) and [English](https://www.youtube.com/watch?v=8sWZMea-q2I) IBM/Watson Speech Synthesis brought to you on video by [STVHub](http://stvhub.com):
 
 ![Automatic Dubbing image](doc/img/fabius.jpg)
 

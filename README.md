@@ -69,6 +69,17 @@ You have to specify the the language in which the audio is spoken. For each lang
   - The broadband model with audio that is sampled at greater than or equal to 16 KHz.
   - The narrowband model with audio that is derived from the telephone, which is typically recorded at 8 KHz.
 
+  Here is the result as of September, 2015.
+
+    ```
+    en-US 8000    => en-US_NarrowbandModel
+    ja-JP 16000   => ja-JP_BroadbandModel
+    es-ES 16000   => es-ES_BroadbandModel
+    ja-JP 8000    => ja-JP_NarrowbandModel
+    es-ES 8000    => es-ES_NarrowbandModel
+    en-US 16000   => en-US_BroadbandModel
+    ```
+
 - Get list of models and languages:
 
   - Model Type
@@ -111,7 +122,55 @@ You have to specify the the language in which the audio is spoken. For each lang
     }
     ```
 
-Simple isn't it ?
+- Transcribe an audio file:
+
+  - Text Type
+
+    ```go
+    type Word struct {
+    	Token string
+    	Begin float64
+    	End float64
+    	Confidence float64
+    }
+    
+    type Text struct {
+    	Words []Word
+    }
+    ```
+    
+  - Example
+    
+    ```go
+    package main
+    
+    import (
+    	"fmt"
+    	"log"
+    	"os"
+    	"github.com/mediawen/watson-go-sdk"
+    )
+    
+    func main() {
+    	w := watson.New(cfg.User, cfg.Pass)
+    
+    	is, err := os.Open("audio.wav")
+    	if err != nil {
+    		log.Fatal(err)
+    	}
+    	defer is.Close()
+    
+    	tt, err := w.Recognize(is, "en-US_BroadbandModel", "wav")
+    	if err != nil {
+    		log.Fatal(err)
+    	}
+    
+    	for _, w := range tt.Words {
+    		fmt.Printf("%v\n", w)
+    	}
+    }
+    ```
+
 
 ---------------------------------------
 ## Roadmap
